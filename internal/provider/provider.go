@@ -65,13 +65,13 @@ func (p *SodiumProvider) Configure(ctx context.Context, req provider.ConfigureRe
 
 func (p *SodiumProvider) Resources(ctx context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
-		// NewExampleResource,
+		NewEncryptedItemResource,
 	}
 }
 
 func (p *SodiumProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
-		NewEncryptedItemDataSource,
+		// NewEncryptedItemDataSource,
 	}
 }
 
